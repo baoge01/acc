@@ -112,16 +112,21 @@ export function SideBar(props: { className?: string }) {
 
   useHotKey();
 
-  return (
+   return (
     <div
       className={`${styles.sidebar} ${props.className} ${
         shouldNarrow && styles["narrow-sidebar"]
       }`}
     >
       <div className={styles["sidebar-header"]}>
-        <div className={styles["sidebar-title"]}>ChatGPT Plus</div>
-        <div className={styles["sidebar-sub-title"]}>
-          Welcome, Your Exclusive Ai Assistant.
+        <div className={styles["title-container"]}>
+          <div className={styles["title-version-container"]}>
+            <div className={styles["sidebar-title"]}>ChatGPT PluS</div>
+            {!shouldNarrow && <div className={styles["version-pill"]}>4.0.2</div>}
+          </div>
+          <div className={styles["sidebar-sub-title"]}>
+            Chat with your own ChatGPT PluS.
+          </div>
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
