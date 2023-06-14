@@ -1,6 +1,6 @@
 import { SubmitKey } from "../store/config";
 
-const cn = {
+const cn = { 
   WIP: "ing……",
   Error: {
     Unauthorized:
